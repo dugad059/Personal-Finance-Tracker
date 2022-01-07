@@ -4,6 +4,18 @@
 
     <body>
         <h1>Personal Tracker</h1>
+        <ul>
+            <% allExpenses.forEach(expense=> { %>
+                <li>
+                    <a href="/expenses/<%= expense._id %> ">
+                        <%= expense.name; %>
+                    </a>
+                    
+                </li>
+                <% }) %>
+        </ul>
+
+        <a href="/expenses/new">Add New Expense</a>
     </body>
 
 </html>

@@ -2,7 +2,7 @@
 const express = require('express')
 const morgan = require('morgan');
 const mongoose = require('mongoose')
-const usersController = require('./controllers/users')
+const expensesController = require('./controllers/expense')
 
 
 
@@ -30,10 +30,10 @@ db
 // Mount Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
-app.get('/', (req, res)=> res.redirect('/users'));
+app.get('/', (req, res)=> res.redirect('/expenses'));
 
 
-app.use('/users', usersController)
+app.use('/expenses', expensesController)
 
 
 
