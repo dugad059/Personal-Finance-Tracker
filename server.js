@@ -2,7 +2,7 @@
 const express = require('express')
 const morgan = require('morgan');
 const mongoose = require('mongoose')
-const expensesController = require('./controllers/expense')
+const expensesController = require('./controllers/expenses')
 
 
 

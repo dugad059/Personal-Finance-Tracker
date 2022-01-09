@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const expenseSchema = new Schema ({
     name: {type: String, required: true},
     date: {type: String, required: true},
-    amount: {type: Number, required: true},
+    amount: {type: String, required: true},
     description: {type: String, required: false}
 }, {timestamps: true});
 
-module.exports = mongoose.model("User", expenseSchema)
+module.exports = mongoose.model("Expense", expenseSchema)
