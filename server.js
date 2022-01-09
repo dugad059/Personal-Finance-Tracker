@@ -3,7 +3,9 @@ const express = require('express')
 const morgan = require('morgan');
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
+const expressSession = require('express-session')
 const expensesController = require('./controllers/expenses')
+const usersController = require('./controllers/users')
 
 
 
@@ -13,7 +15,7 @@ const app = express();
 // Configure Server Settings
 require('dotenv').config();
 app.set('view engine', 'ejs');
-const { PORT, DATABASE_URL } = process.env;
+const { PORT, DATABASE_URL, SECRET } = process.env;
 
 
 // Establish Connection to MongoDB
@@ -32,10 +34,21 @@ db
 app.use(methodOverride('_method'))
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
+app.use(expressSession({
+    secret: SECRET,
+    resave: false,
+    saveUninitialized: false, 
+}));
+app.use(function(req, res, next) {
+    console.log('Session Store: ', req.session);
+    next();
+})
+
 app.get('/', (req, res)=> res.redirect('/expenses'));
 
 
 app.use('/expenses', expensesController)
+app.use('/expenses', usersController);
 
 
 
