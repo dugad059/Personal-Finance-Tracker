@@ -3,7 +3,16 @@
     <%- include('./partials/head.ejs') %>
 
     <body>
+        <h1>Edit Expense Page</h1>
+        <form action="/expenses<%= expense._id %>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%=expense.name%>"/><br />
+            Date: <input type="text" name="date" value="<%=expense.date%>" /><br />
+            Amount: <input type="text" name="amount" value="<%=expense.amount%>" /><br /> 
+            Description: <input type="text" name="description" value="<%=expense.description%>" /><br />
+            <input type="submit" name="" value="Submit Expense Change" />
+        </form>
 
+        <a href="/expenses">Back to All Expenses</a>
     </body>
 
 </html>
