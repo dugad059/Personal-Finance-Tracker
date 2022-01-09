@@ -24,7 +24,7 @@ expensesRouter.delete('/:id', (req, res) => {
 
 // Update
 expensesRouter.put("/:id", (req, res) => {
-    Expense.findByIdAndUpdate( req.params.id, req.body, (error, updatedExpense) => {
+    Expense.findByIdAndUpdate( req.params.id, req.body,  { new: true, }, (error, updatedExpense) => {
         res.redirect(`/expenses/${req.params.id}`)
     })
   })
