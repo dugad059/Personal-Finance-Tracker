@@ -3,7 +3,13 @@
     <%- include('./partials/head.ejs') %>
 
     <body>
-     
+        <h1>See Expense Detail</h1>
+        <h3><%= expense.name %> </h3>
+        <p>Transaction Date: <%= expense.date %></p>
+        <p>Amount: <%= expense.amount %></p>
+        <p>Description: <%= expense.description %></p>
+
+        <a href="/expenses">Back to All Expenses</a>
     </body>
 
 </html>

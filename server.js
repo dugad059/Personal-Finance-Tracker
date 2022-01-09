@@ -2,6 +2,7 @@
 const express = require('express')
 const morgan = require('morgan');
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 const expensesController = require('./controllers/expenses')
 
 
@@ -28,6 +29,7 @@ db
 
 
 // Mount Middleware
+app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.get('/', (req, res)=> res.redirect('/expenses'));

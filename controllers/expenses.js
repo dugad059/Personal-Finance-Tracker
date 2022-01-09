@@ -16,6 +16,11 @@ expensesRouter.get('/new', (req, res) => {
 })
 
 // Delete
+expensesRouter.delete('/:id', (req, res) => {
+    Expense.findByIdAndDelete(req.params.id, (error, data) => {
+        res.redirect('/expenses')
+    })
+})
 
 // Update
 
@@ -29,7 +34,11 @@ expensesRouter.post('/', (req, res) => {
 // Edit
 
 // Show
-
+expensesRouter.get('/:id', (req, res) => {
+    Expense.findById(req.params.id, (error, expense) => {
+        res.render('show', { expense })
+    })
+})
 
 
 
