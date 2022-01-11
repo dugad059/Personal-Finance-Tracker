@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
+
+
+    <header class='show-header'>
+        <div class='show-header-h1'>
+            <a href="/expenses" class='header-a'>
+                <h1>PFT</h1>
+            </a>
+        </div>
+        <div class='show-header-new'>
+            <a href="/expenses/new" class='header-a'>New Expense</a>
+        </div>
+        <div class='show-header-edit'>
+            <a href="/expenses/<%=expense._id %>/edit" class='header-a'>Edit Expense</a>
+        </div>
+        <div class='idx-header-home'>
+            <a href="/expenses" class='header-a'>All Expenses</a>
+        </div>
+    </header>
 
     <body>
-        <h1>See Expense Detail</h1>
-        <h3><%= expense.name %> </h3>
-        <p>Transaction Date: <%= expense.date %></p>
-        <p>Amount: <%= expense.amount %></p>
-        <p>Description: <%= expense.description %></p>
-
-        <a href="/expenses">Back to All Expenses</a>
+        <h2 class='show-all-exp-title'>See Expense Detail</h2>
+        <div class='show-cont'>
+            <h3>
+                <%= expense.name %>
+            </h3>
+            <p>Transaction Date: <%= expense.date %>
+            </p>
+            <p>Amount: $ <%= expense.amount %>
+            </p>
+            <p>Description: <%= expense.description %>
+            </p>
+        </div>
     </body>
 
 </html>

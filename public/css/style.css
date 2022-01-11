@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+/* 
+=====================================
+            INDEX 
+=====================================            
+*/
 .idx-header{
     display: flex;
     align-items: baseline;
@@ -13,11 +18,11 @@ body {
     margin-left: 40px;
 }
 
-.idx-header-edit{
+.idx-header-new{
     flex: 1;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 40px;
+    justify-content: center;
+   
 }
 
 .header-a{
@@ -25,14 +30,21 @@ body {
     text-decoration: none;
 }
 
+.idx-all-exp-title {
+    display: flex;
+    justify-content: center;
+    margin-right: 75px;
+}
+/* 
+=====================================
+        INDEX Container
+=====================================            
+*/
 .cont-idx{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-right: 50px;
-   
-  
-
 }
 
 .cont-idx-box{
@@ -42,7 +54,6 @@ body {
    margin: 5px;
    border-radius: 12px;
 }
-
 
 .cont-idx-row{
     display: flex;
@@ -58,7 +69,6 @@ body {
 .name{
     margin-left: 25px;
     flex: 5;
-
 }
 
 .name:hover{
@@ -77,10 +87,59 @@ body {
     justify-content: flex-end;
 }
 
-
-
 .del-btn{
     flex: 1;  
     display: flex;
     justify-content: flex-end;
+}
+
+
+/* 
+=====================================
+            SHOW
+=====================================            
+*/
+
+.show-header{
+    display: flex;
+    align-items: baseline;
+    margin-right: 40px;
+}
+
+.show-header-h1{
+    flex: 5;
+    margin-left: 40px;
+}
+
+.show-header-new{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.show-header-edit{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.show-header-home{
+    flex: 1;
+}
+
+.show-all-exp-title {
+    display: flex;
+    justify-content: center;
+    margin: 15px 500px;
+
+}
+
+.show-cont {
+    border: 1px #ccc solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
 }
