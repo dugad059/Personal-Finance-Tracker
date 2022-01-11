@@ -1,7 +1,12 @@
 const express = require('express');
+const bcrypt = require('bcrypt')
 const expensesRouter = express.Router();
 const Expense = require('../models/expense');
 
+// Home
+// expensesRouter.get('/', (req, res) => {
+//     res.render('home');
+// });
 
 // Index
 expensesRouter.get('/', (req, res) => {

@@ -5,7 +5,6 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const expressSession = require('express-session')
 const expensesController = require('./controllers/expenses')
-const usersController = require('./controllers/users')
 
 
 
@@ -33,6 +32,7 @@ db
 // Mount Middleware
 app.use(methodOverride('_method'))
 app.use(morgan('dev'));
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(expressSession({
     secret: SECRET,
@@ -44,11 +44,12 @@ app.use(function(req, res, next) {
     next();
 })
 
-app.get('/', (req, res)=> res.redirect('/expenses'));
+app.get('/', (req, res) => {
+    res.redirect('/expenses');
+})
 
 
 app.use('/expenses', expensesController)
-app.use('/expenses', usersController);
 
 
 
