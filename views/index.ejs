@@ -19,32 +19,35 @@
                 <% allExpenses.forEach(expense=> { %>
                     <div class='cont-idx-box'>
                         <li class='cont-idx-row'>
+                            <div class='date'>
+                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none; color: black;'>
+                                    <%= expense.date; %>
+                                </a>
+                            </div>
                             <div class='name'>
-                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none;'>
+                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none; color: black;'>
                                     <%= expense.name; %>
                                 </a>
                             </div>
                             <div class=amt>
-                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none;'>
+                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none; color: black;'>
                                     $ <%= expense.amount; %>
                                 </a>
                             </div>
                             <div class='edit-btn'>
-                                <a href="/expenses/<%=expense._id %>/edit" class='edit-text'
-                                    style='text-decoration: none; text-transform: uppercase;'>Edit</a>
-                                <span class='edit-icon'>
-                                    <ion-icon name="create-outline"></ion-icon>
-                                </span>
+                                <button class='edit-btn-btn'>
+                                    <a href="/expenses/<%=expense._id %>/edit" class='edit-text'
+                                        style='text-decoration: none; color: black; text-transform: uppercase;'>Edit</a>
+                                </button>
                             </div>
                             <br>
                             <div class='del-btn'>
-                                <form action='/expenses/<%= expense._id %>?_method=DELETE' method='POST'>
-                                    <input class='del-text' type="submit" value="DELETE"
-                                        style='border: none; background: none;' />
-                                    <span class='del-icon'>
-                                        <ion-icon name="trash-outline"></ion-icon>
-                                    </span>
-                                </form>
+                                <button class='del-btn-btn'>
+                                    <form action='/expenses/<%= expense._id %>?_method=DELETE' method='POST'>
+                                        <input class='del-text' type="submit" value="DELETE"
+                                            style='border: none; background: none;' />
+                                    </form>
+                                </button>
                             </div>
 
                         </li>
@@ -54,8 +57,6 @@
 
         </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     </body>
 
