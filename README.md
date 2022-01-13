@@ -1,6 +1,6 @@
 # Personal Finance Tracker
 
-
+This application allows you to log your daily spending in order to balance your online checking account! 
 
 
 ## Technologies Used
