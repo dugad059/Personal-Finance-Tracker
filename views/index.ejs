@@ -17,41 +17,43 @@
             <h1 class='idx-all-exp-title'>All Expenses</h1>
             <ul style='list-style-type: none;'>
                 <% allExpenses.forEach(expense=> { %>
-                    <div class='cont-idx-box'>
-                        <li class='cont-idx-row'>
-                            <div class='date'>
-                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none; color: black;'>
-                                    <%= expense.date; %>
-                                </a>
-                            </div>
-                            <div class='name'>
-                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none; color: black;'>
-                                    <%= expense.name; %>
-                                </a>
-                            </div>
-                            <div class=amt>
-                                <a href="/expenses/<%= expense._id %> " style='text-decoration: none; color: black;'>
-                                    $ <%= expense.amount; %>
-                                </a>
-                            </div>
-                            <div class='edit-btn'>
-                                <button class='edit-btn-btn'>
-                                    <a href="/expenses/<%=expense._id %>/edit" class='edit-text'
-                                        style='text-decoration: none; color: black; text-transform: uppercase;'>Edit</a>
-                                </button>
-                            </div>
-                            <br>
-                            <div class='del-btn'>
-                                <button class='del-btn-btn'>
-                                    <form action='/expenses/<%= expense._id %>?_method=DELETE' method='POST'>
-                                        <input class='del-text' type="submit" value="DELETE"
-                                            style='border: none; background: none;' />
-                                    </form>
-                                </button>
-                            </div>
+                        <div class='cont-idx-box'>
+                            <li class='cont-idx-row'>
+                                <div class='date'>
+                                    <a href="/expenses/<%= expense._id %> "
+                                        style='text-decoration: none; color: black;'>
+                                        <%= expense.date; %>
+                                    </a>
+                                </div>
+                                <div class='name'>
+                                    <a href="/expenses/<%= expense._id %> "
+                                        style='text-decoration: none; color: black;'>
+                                        <%= expense.name; %>
+                                    </a>
+                                </div>
+                                <div class=amt>
+                                    <a href="/expenses/<%= expense._id %> "
+                                        style='text-decoration: none; color: black;'>
+                                        $ <%= expense.amount; %>
+                                    </a>
+                                </div>
+                                <div class='edit-btn'>
+                                    <button class='edit-btn-btn'>
+                                        <a href="/expenses/<%=expense._id %>/edit" class='edit-text'>Edit</a>
+                                    </button>
+                                </div>
+                                <br>
+                                <div class='del-btn'>
+            
+                                        <form action='/expenses/<%= expense._id %>?_method=DELETE' method='POST'>
+                                            <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
+                                                style='border: none; background: none;' />   </button>
+                                        </form>
+                                    </button>
+                                </div>
 
-                        </li>
-                    </div>
+                            </li>
+                        </div>
                     <% }) %>
             </ul>
 

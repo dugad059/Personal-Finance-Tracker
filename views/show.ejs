@@ -24,22 +24,24 @@
                 <legend class='show-leg'>
                     <%= expense.name %>
                 </legend>
-                <label for="date">Transaction Date:</label>
+                <label class='new-label'  for="date">Transaction Date:</label>
                 <p id="date-show">
                     <%= expense.date %>
                 </p>
-                <label for="amt-show">Amount:</label>
+                <label class='new-label'  for="amt-show">Amount:</label>
                 <p id="amt">
                     $ <%= expense.amount %>
                 </p>
-                <label for="des">Description:</label>
+                <label class='new-label'  for="des">Description:</label>
                 <p id="des">
                     <%= expense.description %>
                 </p>
             </fieldset>
-            <button class='show-edit-submit'>
-                <a href="/expenses/<%=expense._id %>/edit" style='text-decoration: none; color: black;'>Edit Expense</a>
-            </button>
+            
+                <a href="/expenses/<%=expense._id %>/edit" style='text-decoration: none; color: black;'>
+                    <button class='show-edit-submit'> Edit Expense  </button>
+                </a>
+           
         </div>
     </body>
 

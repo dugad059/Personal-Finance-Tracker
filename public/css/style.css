@@ -27,7 +27,7 @@ body {
 .idx-header-h1{
     flex: 5;
     margin-left: 3%;
-    font-size: 30px;      
+    font-size: 40px;      
 }
 
 
@@ -104,7 +104,7 @@ body {
 }
 
 .amt{
-    margin-left: 30%;
+    margin-left: 45%;
     flex: 1;
     transition: all .2s ease-in-out;
     font-size: 18px;
@@ -118,7 +118,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-   
+    
     
 }
 
@@ -126,16 +126,48 @@ body {
     flex: 1;  
     display: flex;
     justify-content: center;
+    cursor: pointer;
     
 }
 
 .del-btn-btn{
     border-radius: 1rem;
+    transition: all .2s ease-in-out;
+    
+    
 }
 
 .edit-btn-btn{
     border-radius: 1rem;
     padding: 1.5px 25px;
+    transition: all .2s ease-in-out; 
+}
+
+.edit-text, .del-text{
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+.edit-btn-btn:hover, .del-btn-btn:hover{
+    transform: scale(1.1); 
+}
+
+.edit-btn-btn:hover{
+    background: rgba(17,36,90, 0.8);
+    
+}
+
+.del-btn-btn:hover{
+    background: #ff5f5f;
+}
+
+.del-text:hover, .edit-text:hover{
+    color: rgb(255, 255, 255);
+   
 }
 
 
@@ -161,7 +193,7 @@ body {
     flex: 5;
     margin-left: 3%;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 .show-header-new{
@@ -217,6 +249,23 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     background: gainsboro;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    transition: all .2s ease-in-out; 
+    cursor: pointer;
+    
+}
+
+.show-edit-submit:hover{
+    transform: scale(1.1); 
+    border: 1px solid #ccc;
+    border-radius: 11px;
+}
+
+.show-leg{
+    font-size: 35px;
+    font-weight: 525;
+    font-variant: small-caps;
 }
 
 
@@ -228,6 +277,7 @@ body {
 
 .new-h1{
     margin: 20px auto;
+    font-size: 50px;
 }
 
 .cont-new-form{
@@ -276,6 +326,17 @@ label {
     border: 1px solid #ccc;
     border-radius: 5px;
     background: gainsboro;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    transition: all .2s ease-in-out; 
+    cursor: pointer;
+    
+}
+
+.new-submit:hover{
+    transform: scale(1.1); 
+    border: 1px solid #ccc;
+    border-radius: 11px;
 }
 
 textarea {
@@ -284,4 +345,11 @@ textarea {
     border: 1px solid #ccc;
     max-width: 400px;
     max-height: 150px;
+  }
+
+  .new-label{
+      font-size: 23px;
+      font-style: oblique;
+      font-variant: small-caps;
+      font-weight: 600;
   }

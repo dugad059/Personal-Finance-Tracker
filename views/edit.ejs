@@ -22,14 +22,14 @@
             <h1 class='new-h1'>Edit Expense</h1>
             <form action="/expenses/<%= expense._id %>?_method=PUT" method="POST">
                 <fieldset class='new-info'>
-                    <legend>Expense Info</legend>
-                    <label for="name">Transaction Name</label>
+                    <legend class='show-leg'>Expense Info</legend>
+                    <label class='new-label'  for="name">Transaction Name</label>
                     <input type="text" name="name" value="<%=expense.name%>" id="name-new" /><br />
-                    <label for="date">Transaction Date</label>
+                    <label class='new-label'  for="date">Transaction Date</label>
                     <input type="text" name="date" value="<%=expense.date%>" id="date-new" /><br />
-                    <label for="amt">Amount</label>
+                    <label class='new-label'  for="amt">Amount</label>
                     <input type="text" name="amount" value="<%= expense.amount%>" id="amt-new" /><br />
-                    <label for="des">Description</label>
+                    <label class='new-label'  for="des">Description</label>
                     <input type='text' name="description" value=" <%=expense.description%>" id="des-edit" /><br />
                 </fieldset>
                 <input type="submit" class='new-submit' value="Edit Expense" />
