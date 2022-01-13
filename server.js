@@ -34,15 +34,6 @@ app.use(methodOverride('_method'))
 app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
-app.use(expressSession({
-    secret: SECRET,
-    resave: false,
-    saveUninitialized: false, 
-}));
-app.use(function(req, res, next) {
-    console.log('Session Store: ', req.session);
-    next();
-})
 
 app.get('/', (req, res) => {
     res.redirect('/expenses');
