@@ -16,8 +16,8 @@
 
 
 ## Screenshots 
-
-![Index Page.png](Index Page)
+###Index Page
+![](pictures/Index%20Page.png)
 ![]()
 
 
