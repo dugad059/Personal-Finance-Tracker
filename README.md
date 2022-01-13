@@ -26,6 +26,9 @@ Show Page
 Edit Page
 ![](pictures/Edit%20Page.png)
 
+New Page
+![](pictures/New%20Page.png)
+
 
 
 
