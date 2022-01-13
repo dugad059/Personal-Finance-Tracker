@@ -3,7 +3,6 @@ const express = require('express')
 const morgan = require('morgan');
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
-const expressSession = require('express-session')
 const expensesController = require('./controllers/expenses')
 
 
@@ -14,7 +13,7 @@ const app = express();
 // Configure Server Settings
 require('dotenv').config();
 app.set('view engine', 'ejs');
-const { PORT, DATABASE_URL, SECRET } = process.env;
+const { PORT, DATABASE_URL } = process.env;
 
 
 // Establish Connection to MongoDB
