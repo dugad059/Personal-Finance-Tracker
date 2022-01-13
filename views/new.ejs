@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
+
+
+    <header class='show-header'>
+        <div class='show-header-h1'>
+            <a href="/expenses" class='header-a'>
+                <h1>PFT</h1>
+            </a>
+        </div>
+        <div class='show-header-home'>
+            <a href="/expenses" class='header-a'>All Expenses</a>
+        </div>
+    </header>
+
 
     <body>
-        <h1>New Expense Page</h1>
-        <form action="/expenses" method="POST">
-            Transaction Name: <input placeholder="Chipotle ..." type="text" name="name" /><br />
-            Transaction Date: <input placeholder=" 1/1/21..." type="text" name="date" /><br />
-            Amount: <input placeholder="12.00.." type="text" name="amount" /><br /> 
-            Description: <input placeholder="optional..." type="text" name="description" /><br />
-            <input type="submit" name="" value="Add Expense" />
-        </form>
 
-        <a href="/expenses">Back to All Expenses</a>
+        <div class='cont-new-form'>
+            <h1 class='new-h1'>New Expense</h1>
+            <form action="/expenses" method="POST">
+                <fieldset class='new-info'>
+                    <legend>Expense Info</legend>
+                    <label for="name">Transaction Name</label>
+                    <input placeholder="Chipotle ..." type="text" name="name" id="name-new" />
+                    <label for="date">Transaction Date</label>
+                    <input placeholder=" 1/1/21..." type="text" name="date" id="date-new" />
+                    <label for="amt">Amount</label>
+                    <input placeholder="12.00..." type="text" name="amount" id="amt-new" />
+                    <label for="des">Description</label>
+                    <textarea name="description" id="des" placeholder="Optional ..." cols="30" rows="10"></textarea>
+                </fieldset>
+                <input type="submit" class='new-submit' value="Add Expense" />
+            </form>
+        </div>
+
     </body>
 
 </html>

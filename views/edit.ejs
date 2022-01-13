@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
+
+    <header class='show-header'>
+        <div class='show-header-h1'>
+            <a href="/expenses" class='header-a'>
+                <h1>PFT</h1>
+            </a>
+        </div>
+        <div class='show-header-new'>
+            <a href="/expenses/new" class='header-a'>New Expense</a>
+        </div>
+        <div class='show-header-home'>
+            <a href="/expenses" class='header-a'>All Expenses</a>
+        </div>
+    </header>
 
     <body>
-        <h1>Edit Expense Page</h1>
-        <form action="/expenses/<%= expense._id %>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%=expense.name%>"/><br />
-            Date: <input type="text" name="date" value="<%=expense.date%>" /><br />
-            Amount: <input type="text" name="amount" value="<%=expense.amount%>" /><br /> 
-            Description: <input type="text" name="description" value="<%=expense.description%>" /><br />
-            <input type="submit" name="" value="Submit Expense Change" />
-        </form>
 
-        <a href="/expenses">Back to All Expenses</a>
+        <div class='cont-new-form'>
+            <h1 class='new-h1'>Edit Expense</h1>
+            <form action="/expenses/<%= expense._id %>?_method=PUT" method="POST">
+                <fieldset class='new-info'>
+                    <legend>Expense Info</legend>
+                    <label for="name">Transaction Name</label>
+                    <input type="text" name="name" value="<%=expense.name%>" id="name-new" /><br />
+                    <label for="date">Transaction Date</label>
+                    <input type="text" name="date" value="<%=expense.date%>" id="date-new" /><br />
+                    <label for="amt">Amount</label>
+                    <input type="text" name="amount" value="<%= expense.amount%>" id="amt-new" /><br />
+                    <label for="des">Description</label>
+                    <input type='text' name="description" value=" <%=expense.description%>" id="des-edit" /><br />
+                </fieldset>
+                <input type="submit" class='new-submit' value="Edit Expense" />
+            </form>
+        </div>
+
     </body>
+
 
 </html>

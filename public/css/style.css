@@ -1,6 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap');
+
 body {
     background-color: rgb(255, 255, 255);
     margin: 0;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 /* 
@@ -9,20 +13,34 @@ body {
 =====================================            
 */
 .idx-header{
+    background: linear-gradient(rgba(17,36,90, 0.8), rgba(17,36,90, 0.8));
+    height: 15vh;
+    background-position: center; 
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    color: #f9f9f9;
+    
 }
 
 .idx-header-h1{
     flex: 5;
-    margin-left: 40px;
+    margin-left: 3%;
+    font-size: 30px;      
 }
+
 
 .idx-header-new{
     flex: 1;
     display: flex;
-    justify-content: center;
-   
+    justify-content: flex-start;
+    transition: all .2s ease-in-out; 
+    font-size: 23px;
+}
+
+.idx-header-new:hover{
+    transform: scale(1.1); 
 }
 
 .header-a{
@@ -33,7 +51,7 @@ body {
 .idx-all-exp-title {
     display: flex;
     justify-content: center;
-    margin-right: 75px;
+    margin: 40px auto;
 }
 /* 
 =====================================
@@ -67,18 +85,33 @@ body {
 }
 
 .date{
+    margin-left: 25px;
     flex: 1;
+    font-size: 18px;
 }
+
+
 
 .name{
     margin-left: 25px;
-    flex: 5;
+    flex: 1;
+    transition: all .2s ease-in-out;
+    font-size: 18px;
+}
+
+.name:hover{
+    transform: scale(1.1); 
 }
 
 .amt{
+    margin-left: 30%;
     flex: 1;
-    display: flex;
-    justify-content: center;
+    transition: all .2s ease-in-out;
+    font-size: 18px;
+}
+
+.amt:hover{
+    transform: scale(1.1); 
 }
 
 .edit-btn{
@@ -114,50 +147,141 @@ body {
 */
 
 .show-header{
+    background: linear-gradient(rgba(17,36,90, 0.8), rgba(17,36,90, 0.8));
+    height: 15vh;
+    background-position: center; 
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
-    align-items: baseline;
-    margin-right: 40px;
+    align-items: center;
+    color: #f9f9f9;
 }
 
 .show-header-h1{
     flex: 5;
-    margin-left: 40px;
+    margin-left: 3%;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
 }
 
 .show-header-new{
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    font-family: 'Titillium Web', sans-serif;
+    transition: all .2s ease-in-out; 
+    font-size: 20px;
+}
+
+.show-header-new:hover{
+    transform: scale(1.1); 
 }
 
 .show-header-home{
     flex: 1;
-}
-
-.show-all-exp-title {
     display: flex;
-    justify-content: center;
-    margin: 15px 500px;
-
+    justify-content: flex-start;
+    font-family: 'Titillium Web', sans-serif;
+    transition: all .2s ease-in-out; 
+    font-size: 20px;
 }
 
-.show-cont {
-    border: 1px #ccc solid;
-    padding: 20px;
+.show-header-home:hover{
+    transform: scale(1.1); 
+}
+
+.cont-show {
+    width: 30%;
+    height: 70vw;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background: #f9f9f9;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.show-info{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.show-edit-submit{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     background: gainsboro;
-    margin: 0 500px;
-    border-radius: 1rem;
 }
 
-.show-header-edit{
+
+/* 
+=====================================
+            NEW
+=====================================            
+*/
+
+.new-h1{
+    margin: 20px auto;
+}
+
+.cont-new-form{
+    width: 30%;
+    height: 70vw;
+    margin: 50px auto;
     display: flex;
-    justify-content: center;
-    margin-top: 15px;
+    flex-direction: column;
+    background: #f9f9f9;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    
+
 }
 
-.show-edit-btn{
-    border-radius: 1rem;
+
+.new-info{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
 }
+
+legend {
+    padding: 0px 10px;
+}
+
+label {
+    display: block;
+}
+
+#name-new, #date-new, #amt-new, #des-edit {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.new-submit{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: gainsboro;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    max-height: 150px;
+  }
