@@ -5,47 +5,47 @@
     <body>
         <header class='idx-header'>
             <div class='idx-header-h1'>
-                <a href="/expenses" class='header-a'>
+                <a href="/debts" class='header-a'>
                     <h1>PFT</h1>
                 </a>
             </div>
             <div class='idx-header-new'>
-                <a href="/expenses/new" class='header-a'>New Expense</a>
+                <a href="/debts/new" class='header-a'>New Expense</a>
             </div>
         </header>
         <div class='cont-idx'>
             <h1 class='idx-all-exp-title'>All Expenses</h1>
             <ul style='list-style-type: none;'>
-                <% allExpenses.forEach(expense=> { %>
+                <% allDebts.forEach(debt => { %>
                         <div class='cont-idx-box'>
                             <li class='cont-idx-row'>
                                 <div class='date'>
-                                    <a href="/expenses/<%= expense._id %> "
+                                    <a href="/debts/<%= debt._id %> "
                                         style='text-decoration: none; color: black;'>
-                                        <%= expense.date; %>
+                                        <%= debt.date; %>
                                     </a>
                                 </div>
                                 <div class='name'>
-                                    <a href="/expenses/<%= expense._id %> "
+                                    <a href="/debts/<%= debt._id %> "
                                         style='text-decoration: none; color: black;'>
-                                        <%= expense.name; %>
+                                        <%= debt.name; %>
                                     </a>
                                 </div>
                                 <div class=amt>
-                                    <a href="/expenses/<%= expense._id %> "
+                                    <a href="/debts/<%= debt._id %> "
                                         style='text-decoration: none; color: black;'>
-                                        $ <%= expense.amount; %>
+                                        $ <%= debt.amount; %>
                                     </a>
                                 </div>
                                 <div class='edit-btn'>
                                     <button class='edit-btn-btn'>
-                                        <a href="/expenses/<%=expense._id %>/edit" class='edit-text'>Edit</a>
+                                        <a href="/debts/<%=debt._id %>/edit" class='edit-text'>Edit</a>
                                     </button>
                                 </div>
                                 <br>
                                 <div class='del-btn'>
             
-                                        <form action='/expenses/<%= expense._id %>?_method=DELETE' method='POST'>
+                                        <form action='/debts/<%= debt._id %>?_method=DELETE' method='POST'>
                                             <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
                                                 style='border: none; background: none;' />   </button>
                                         </form>

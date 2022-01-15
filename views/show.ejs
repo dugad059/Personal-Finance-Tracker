@@ -5,15 +5,15 @@
 
     <header class='show-header'>
         <div class='show-header-h1'>
-            <a href="/expenses" class='header-a'>
+            <a href="/debts" class='header-a'>
                 <h1>PFT</h1>
             </a>
         </div>
         <div class='show-header-new'>
-            <a href="/expenses/new" class='header-a'>New Expense</a>
+            <a href="/debtss/new" class='header-a'>New Expense</a>
         </div>
         <div class='show-header-home'>
-            <a href="/expenses" class='header-a'>All Expenses</a>
+            <a href="/debts" class='header-a'>All Expenses</a>
         </div>
     </header>
 
@@ -22,23 +22,23 @@
             <h1 class='new-h1'>Expense Detail</h1>
             <fieldset class='show-info'>
                 <legend class='show-leg'>
-                    <%= expense.name %>
+                    <%= debt.name %>
                 </legend>
                 <label class='new-label'  for="date">Transaction Date:</label>
                 <p id="date-show">
-                    <%= expense.date %>
+                    <%= debt.date %>
                 </p>
                 <label class='new-label'  for="amt-show">Amount:</label>
                 <p id="amt">
-                    $ <%= expense.amount %>
+                    $ <%= debt.amount %>
                 </p>
                 <label class='new-label'  for="des">Description:</label>
                 <p id="des">
-                    <%= expense.description %>
+                    <%= debt.description %>
                 </p>
             </fieldset>
             
-                <a href="/expenses/<%=expense._id %>/edit" style='text-decoration: none; color: black;'>
+                <a href="/debts/<%=debt._id %>/edit" style='text-decoration: none; color: black;'>
                     <button class='show-edit-submit'> Edit Expense  </button>
                 </a>
            
@@ -55,26 +55,3 @@
 
 
 
-<!-- 
-<body>
-    <div class='cont-show'>
-        <h2 class='show-all-exp-title'>Expense Detail</h2>
-        <h3>
-            < %= expense.name %>
-        </h3>
-        <p>Transaction Date: < %= expense.date %>
-        </p>
-        <p>Amount: $ < %= expense.amount %>
-        </p>
-        <p>Description: < %= expense.description %>
-        </p>
-    </div>
-
-    <div class='show-header-edit'>
-        <button class='show-edit-btn'>
-            <h3>
-                <a href="/expenses/< %=expense._id %>/edit" class='header-a'>Edit Expense</a>
-            </h3>
-        </button>
-    </div>
-</body> -->

@@ -3,7 +3,7 @@ const express = require('express')
 const morgan = require('morgan');
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
-const expensesController = require('./controllers/expenses')
+const debtsController = require('./controllers/debts')
 
 
 
@@ -35,11 +35,11 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-    res.redirect('/expenses');
+    res.redirect('/debts');
 })
 
 
-app.use('/expenses', expensesController)
+app.use('/debts', debtsController)
 
 
 
@@ -47,6 +47,6 @@ app.use('/expenses', expensesController)
 app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`))
 
 
-// Test 
+
 
 
