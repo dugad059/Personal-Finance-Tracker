@@ -1,6 +1,6 @@
 # Personal Finance Tracker
 
-
+This application allows you to log your daily spending in order to balance your online checking account! 
 
 
 ## Technologies Used
@@ -17,13 +17,24 @@
 
 ## Screenshots 
 
-![]()
-![]()
+Index Page
+![](pictures/Index%20Page.png)
+
+Show Page
+![](pictures/Show%20Page.png)
+
+Edit Page
+![](pictures/Edit%20Page.png)
+
+New Page
+![](pictures/New%20Page.png)
+
+
 
 
 ## Getting Started
 
-[Click HERE]() to start logging you expenses!!
+[Click HERE](https://personal-finance-tracker-059.herokuapp.com/expenses) to start logging you expenses!!
 
 
 ## Future Enhancements
