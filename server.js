@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const debitsController = require('./controllers/debits')
+const creditsController = require('./controllers/credits');
+const { application } = require('express');
 
 
 
@@ -39,7 +41,10 @@ app.get('/', (req, res) => {
 })
 
 
+// Controllers
+app.use('/credit', creditsController)
 app.use('/debit', debitsController)
+
 
 
 

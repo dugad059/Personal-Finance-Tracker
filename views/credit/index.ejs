@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>PFT</title>
+</head>
+
+<body>
+    <header class='idx-header'>
+        <div class='idx-header-h1'>
+            <a href="/credit" class='header-a'>
+                <h1>PFT</h1>
+            </a>
+        </div>
+        <div class='idx-header-new'>
+            <a href="/credit/new" class='header-a'>New Expense</a>
+        </div>
+    </header>
+    <div class='cont-idx'>
+        <h1 class='idx-all-exp-title'>All Credit Expenses</h1>
+        <ul style='list-style-type: none;'>
+            <% allCredits.forEach(credit => { %>
+                <div class='cont-idx-box'>
+                    <li class='cont-idx-row'>
+                        <div class='date'>
+                            <a href="/credit/<%= credit._id %> " style='text-decoration: none; color: black;'>
+                                <%= credit.date; %>
+                            </a>
+                        </div>
+                        <div class='name'>
+                            <a href="/credit/<%= credit._id %> " style='text-decoration: none; color: black;'>
+                                <%= credit.name; %>
+                            </a>
+                        </div>
+                        <div class=amt>
+                            <a href="/credit/<%= credit._id %> " style='text-decoration: none; color: black;'>
+                                $ <%= credit.amount; %>
+                            </a>
+                        </div>
+                        <div class='edit-btn'>
+                            <button class='edit-btn-btn'>
+                                <a href="/credit/<%=credit._id %>/edit" class='edit-text'>Edit</a>
+                            </button>
+                        </div>
+                        <br>
+                        <div class='del-btn'>
+
+                            <form action='/credit/<%= credit._id %>?_method=DELETE' method='POST'>
+                                <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
+                                        style='border: none; background: none;' /> </button>
+                            </form>
+                            </button>
+                        </div>
+
+                    </li>
+                </div>
+                <% }) %>
+        </ul>
+
+    </div>
+
+
+</body>
+
+</html>
