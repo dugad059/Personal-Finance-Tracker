@@ -5,15 +5,15 @@
 
     <header class='show-header'>
         <div class='show-header-h1'>
-            <a href="/debts" class='header-a'>
+            <a href="/debit" class='header-a'>
                 <h1>PFT</h1>
             </a>
         </div>
         <div class='show-header-new'>
-            <a href="/debtss/new" class='header-a'>New Expense</a>
+            <a href="/debit/debit/new" class='header-a'>New Expense</a>
         </div>
         <div class='show-header-home'>
-            <a href="/debts" class='header-a'>All Expenses</a>
+            <a href="/debit" class='header-a'>All Expenses</a>
         </div>
     </header>
 
@@ -22,23 +22,23 @@
             <h1 class='new-h1'>Expense Detail</h1>
             <fieldset class='show-info'>
                 <legend class='show-leg'>
-                    <%= debt.name %>
+                    <%= debit.name %>
                 </legend>
                 <label class='new-label'  for="date">Transaction Date:</label>
                 <p id="date-show">
-                    <%= debt.date %>
+                    <%= debit.date %>
                 </p>
                 <label class='new-label'  for="amt-show">Amount:</label>
                 <p id="amt">
-                    $ <%= debt.amount %>
+                    $ <%= debit.amount %>
                 </p>
                 <label class='new-label'  for="des">Description:</label>
                 <p id="des">
-                    <%= debt.description %>
+                    <%= debit.description %>
                 </p>
             </fieldset>
             
-                <a href="/debts/<%=debt._id %>/edit" style='text-decoration: none; color: black;'>
+                <a href="/debit/<%=debit._id %>/debit/edit" style='text-decoration: none; color: black;'>
                     <button class='show-edit-submit'> Edit Expense  </button>
                 </a>
            

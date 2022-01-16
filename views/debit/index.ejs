@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs') %>
+    <%- include('./partials/head.ejs') %>
 
     <body>
         <header class='idx-header'>
             <div class='idx-header-h1'>
-                <a href="/debts" class='header-a'>
+                <a href="/debit" class='header-a'>
                     <h1>PFT</h1>
                 </a>
             </div>
             <div class='idx-header-new'>
-                <a href="/debts/new" class='header-a'>New Expense</a>
+                <a href="/debit/new" class='header-a'>New Expense</a>
             </div>
         </header>
         <div class='cont-idx'>
             <h1 class='idx-all-exp-title'>All Expenses</h1>
             <ul style='list-style-type: none;'>
-                <% allDebts.forEach(debt => { %>
+                <% allDebits.forEach(debit => { %>
                         <div class='cont-idx-box'>
                             <li class='cont-idx-row'>
                                 <div class='date'>
-                                    <a href="/debts/<%= debt._id %> "
+                                    <a href="/debit/<%= debit._id %> "
                                         style='text-decoration: none; color: black;'>
-                                        <%= debt.date; %>
+                                        <%= debit.date; %>
                                     </a>
                                 </div>
                                 <div class='name'>
-                                    <a href="/debts/<%= debt._id %> "
+                                    <a href="/debit/<%= debit._id %> "
                                         style='text-decoration: none; color: black;'>
-                                        <%= debt.name; %>
+                                        <%= debit.name; %>
                                     </a>
                                 </div>
                                 <div class=amt>
-                                    <a href="/debts/<%= debt._id %> "
+                                    <a href="/debit/<%= debit._id %> "
                                         style='text-decoration: none; color: black;'>
-                                        $ <%= debt.amount; %>
+                                        $ <%= debit.amount; %>
                                     </a>
                                 </div>
                                 <div class='edit-btn'>
                                     <button class='edit-btn-btn'>
-                                        <a href="/debts/<%=debt._id %>/edit" class='edit-text'>Edit</a>
+                                        <a href="/debit/<%=debit._id %>/debit/edit" class='edit-text'>Edit</a>
                                     </button>
                                 </div>
                                 <br>
                                 <div class='del-btn'>
             
-                                        <form action='/debts/<%= debt._id %>?_method=DELETE' method='POST'>
+                                        <form action='/debit/<%= debt._id %>?_method=DELETE' method='POST'>
                                             <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
                                                 style='border: none; background: none;' />   </button>
                                         </form>

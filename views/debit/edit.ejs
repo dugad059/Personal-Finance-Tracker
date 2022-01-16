@@ -4,15 +4,15 @@
 
     <header class='show-header'>
         <div class='show-header-h1'>
-            <a href="/debts" class='header-a'>
+            <a href="/debit" class='header-a'>
                 <h1>PFT</h1>
             </a>
         </div>
         <div class='show-header-new'>
-            <a href="/debts/new" class='header-a'>New Expense</a>
+            <a href="/debit/new" class='header-a'>New Expense</a>
         </div>
         <div class='show-header-home'>
-            <a href="/debts" class='header-a'>All Expenses</a>
+            <a href="/debit" class='header-a'>All Expenses</a>
         </div>
     </header>
 
@@ -20,17 +20,17 @@
 
         <div class='cont-new-form'>
             <h1 class='new-h1'>Edit Expense</h1>
-            <form action="/debts/<%= debt._id %>?_method=PUT" method="POST">
+            <form action="/debit/<%= debit._id %>?_method=PUT" method="POST">
                 <fieldset class='new-info'>
                     <legend class='show-leg'>Expense Info</legend>
                     <label class='new-label'  for="name">Transaction Name</label>
-                    <input type="text" name="name" value="<%=debt.name%>" id="name-new" /><br />
+                    <input type="text" name="name" value="<%=debit.name%>" id="name-new" /><br />
                     <label class='new-label'  for="date">Transaction Date</label>
-                    <input type="text" name="date" value="<%=debt.date%>" id="date-new" /><br />
+                    <input type="text" name="date" value="<%=debit.date%>" id="date-new" /><br />
                     <label class='new-label'  for="amt">Amount</label>
-                    <input type="text" name="amount" value="<%= debt.amount%>" id="amt-new" /><br />
+                    <input type="text" name="amount" value="<%= debit.amount%>" id="amt-new" /><br />
                     <label class='new-label'  for="des">Description</label>
-                    <input type='text' name="description" value=" <%=debt.description%>" id="des-edit" /><br />
+                    <input type='text' name="description" value=" <%=debit.description%>" id="des-edit" /><br />
                 </fieldset>
                 <input type="submit" class='new-submit' value="Edit Expense" />
             </form>
