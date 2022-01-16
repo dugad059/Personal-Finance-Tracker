@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
 
-    <body>
-        <header class='idx-header'>
-            <div class='idx-header-h1'>
-                <a href="/debit" class='header-a'>
-                    <h1>PFT</h1>
-                </a>
-            </div>
-            <div class='idx-header-new'>
-                <a href="/debit/new" class='header-a'>New Expense</a>
-            </div>
-        </header>
-        <div class='cont-idx'>
-            <h1 class='idx-all-exp-title'>All Expenses</h1>
-            <ul style='list-style-type: none;'>
-                <% allDebits.forEach(debit => { %>
-                        <div class='cont-idx-box'>
-                            <li class='cont-idx-row'>
-                                <div class='date'>
-                                    <a href="/debit/<%= debit._id %> "
-                                        style='text-decoration: none; color: black;'>
-                                        <%= debit.date; %>
-                                    </a>
-                                </div>
-                                <div class='name'>
-                                    <a href="/debit/<%= debit._id %> "
-                                        style='text-decoration: none; color: black;'>
-                                        <%= debit.name; %>
-                                    </a>
-                                </div>
-                                <div class=amt>
-                                    <a href="/debit/<%= debit._id %> "
-                                        style='text-decoration: none; color: black;'>
-                                        $ <%= debit.amount; %>
-                                    </a>
-                                </div>
-                                <div class='edit-btn'>
-                                    <button class='edit-btn-btn'>
-                                        <a href="/debit/<%=debit._id %>/debit/edit" class='edit-text'>Edit</a>
-                                    </button>
-                                </div>
-                                <br>
-                                <div class='del-btn'>
-            
-                                        <form action='/debit/<%= debt._id %>?_method=DELETE' method='POST'>
-                                            <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
-                                                style='border: none; background: none;' />   </button>
-                                        </form>
-                                    </button>
-                                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>PFT</title>
+</head>
 
-                            </li>
-                        </div>
-                    <% }) %>
-            </ul>
-
+<body>
+    <header class='idx-header'>
+        <div class='idx-header-h1'>
+            <a href="/debit" class='header-a'>
+                <h1>PFT</h1>
+            </a>
         </div>
+        <div class='idx-header-new'>
+            <a href="/debit/new" class='header-a'>New Expense</a>
+        </div>
+    </header>
+    <div class='cont-idx'>
+        <h1 class='idx-all-exp-title'>All Debit Expenses</h1>
+        <ul style='list-style-type: none;'>
+            <% allDebits.forEach(debit=> { %>
+                <div class='cont-idx-box'>
+                    <li class='cont-idx-row'>
+                        <div class='date'>
+                            <a href="/debit/<%= debit._id %> " style='text-decoration: none; color: black;'>
+                                <%= debit.date; %>
+                            </a>
+                        </div>
+                        <div class='name'>
+                            <a href="/debit/<%= debit._id %> " style='text-decoration: none; color: black;'>
+                                <%= debit.name; %>
+                            </a>
+                        </div>
+                        <div class=amt>
+                            <a href="/debit/<%= debit._id %> " style='text-decoration: none; color: black;'>
+                                $ <%= debit.amount; %>
+                            </a>
+                        </div>
+                        <div class='edit-btn'>
+                            <button class='edit-btn-btn'>
+                                <a href="/debit/<%=debit._id %>/edit" class='edit-text'>Edit</a>
+                            </button>
+                        </div>
+                        <br>
+                        <div class='del-btn'>
+
+                            <form action='/debit/<%= debit._id %>?_method=DELETE' method='POST'>
+                                <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
+                                        style='border: none; background: none;' /> </button>
+                            </form>
+                            </button>
+                        </div>
+
+                    </li>
+                </div>
+                <% }) %>
+        </ul>
+
+    </div>
 
 
-    </body>
+</body>
 
 </html>

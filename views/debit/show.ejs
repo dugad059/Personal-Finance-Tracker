@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs') %>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css">
+        <title>PFT</title>
+    </head>
 
 
     <header class='show-header'>
@@ -10,7 +16,7 @@
             </a>
         </div>
         <div class='show-header-new'>
-            <a href="/debit/debit/new" class='header-a'>New Expense</a>
+            <a href="/debit/new" class='header-a'>New Expense</a>
         </div>
         <div class='show-header-home'>
             <a href="/debit" class='header-a'>All Expenses</a>
@@ -38,7 +44,7 @@
                 </p>
             </fieldset>
             
-                <a href="/debit/<%=debit._id %>/debit/edit" style='text-decoration: none; color: black;'>
+                <a href="/debit/<%=debit._id %>/edit" style='text-decoration: none; color: black;'>
                     <button class='show-edit-submit'> Edit Expense  </button>
                 </a>
            

@@ -24,7 +24,7 @@ debitsRouter.delete('/:id', (req, res) => {
 
 // Update
 debitsRouter.put("/:id", (req, res) => {
-    Debit.findByIdAndUpdate( req.params.id, req.body,  { new: true, }, (error, updatedDebits) => {
+    Debit.findByIdAndUpdate( req.params.id, req.body,  { new: true, }, (error, updatedDebit) => {
         res.redirect(`/debit/${req.params.id}`)
     })
   })
