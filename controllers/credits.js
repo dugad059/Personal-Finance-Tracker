@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt')
 const creditsRouter = express.Router();
 const Credit = require('../models/credit');
+const User = require('../models/user');
 
 // Index
 creditsRouter.get('/', (req, res) => {

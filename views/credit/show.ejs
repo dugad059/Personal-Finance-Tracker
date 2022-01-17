@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css">
+        <title>PFT</title>
+    </head>
+
+
+    <header class='show-header'>
+        <div class='show-header-h1'>
+            <a href="/credit" class='header-a'>
+                <h1>PFT</h1>
+            </a>
+        </div>
+        <div class='show-header-new'>
+            <a href="/credit/new" class='header-a'>New Credit Expense</a>
+        </div>
+        <div class='show-header-home'>
+            <a href="/credit" class='header-a'>All Credit Expenses</a>
+        </div>
+    </header>
+
+    <body>
+        <div class='cont-show'>
+            <h1 class='new-h1'>Expense Detail</h1>
+            <fieldset class='show-info'>
+                <legend class='show-leg'>
+                    <%= credit.name %>
+                </legend>
+                <label class='new-label'  for="date">Transaction Date:</label>
+                <p id="date-show">
+                    <%= credit.date %>
+                </p>
+                <label class='new-label'  for="amt-show">Amount:</label>
+                <p id="amt">
+                    $ <%= credit.amount %>
+                </p>
+                <label class='new-label'  for="des">Description:</label>
+                <p id="des">
+                    <%= credit.description %>
+                </p>
+            </fieldset>
+            
+                <a href="/credit/<%=credit._id %>/edit" style='text-decoration: none; color: black;'>
+                    <button class='show-edit-submit'> Edit Expense  </button>
+                </a>
+           
+        </div>
+    </body>
+
+</html>

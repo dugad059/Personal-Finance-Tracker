@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const debitsController = require('./controllers/debits')
 const creditsController = require('./controllers/credits');
-const { application } = require('express');
+const usersController = require('./controllers/users');
+
 
 
 
@@ -37,13 +38,14 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-    res.redirect('/debit');
+    res.redirect('/dashboard');
 })
 
 
 // Controllers
 app.use('/credit', creditsController)
 app.use('/debit', debitsController)
+app.use('/', usersController);
 
 
 

@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt')
 const debitsRouter = express.Router();
 const Debit = require('../models/debit');
+const User = require('../models/user');
 
 // Index
 debitsRouter.get('/', (req, res) => {

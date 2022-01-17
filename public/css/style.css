@@ -118,6 +118,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    transition: all .2s ease-in-out;
     
     
 }
@@ -126,48 +127,12 @@ body {
     flex: 1;  
     display: flex;
     justify-content: center;
-    cursor: pointer;
-    
-}
-
-.del-btn-btn{
-    border-radius: 1rem;
-    transition: all .2s ease-in-out;
-    
-    
-}
-
-.edit-btn-btn{
-    border-radius: 1rem;
-    padding: 1.5px 25px;
     transition: all .2s ease-in-out; 
 }
 
-.edit-text, .del-text{
-    font-family: 'Titillium Web', sans-serif;
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    font-weight: 600;
-    
-}
 
-.edit-btn-btn:hover, .del-btn-btn:hover{
+.edit-btn:hover, .del-btn:hover{
     transform: scale(1.1); 
-}
-
-.edit-btn-btn:hover{
-    background: rgba(17,36,90, 0.8);
-    
-}
-
-.del-btn-btn:hover{
-    background: #ff5f5f;
-}
-
-.del-text:hover, .edit-text:hover{
-    color: rgb(255, 255, 255);
-   
 }
 
 

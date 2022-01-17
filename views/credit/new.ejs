@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css">
+        <title>PFT</title>
+    </head>
+
+
+    <header class='show-header'>
+        <div class='show-header-h1'>
+            <a href="/credit" class='header-a'> 
+                <h1>PFT</h1>
+            </a>
+        </div>
+        <div class='show-header-home'>
+            <a href="/credit" class='header-a'>All Credit Expenses</a>
+        </div>
+    </header>
+
+
+    <body>
+
+        <div class='cont-new-form'>
+            <h1 class='new-h1'>New Credit Expense</h1>
+            <form action="/credit" method="POST">
+                <fieldset class='new-info'>
+                    <legend class='show-leg'>Expense Info</legend>
+                    <label class='new-label' for="name">Transaction Name</label>
+                    <input placeholder="Chipotle ..." type="text" name="name" id="name-new" />
+                    <label class='new-label' for="date">Transaction Date</label>
+                    <input placeholder=" 1/1/21..." type="text" name="date" id="date-new" />
+                    <label class='new-label' for="amt">Amount</label>
+                    <input placeholder="12.00..." type="text" name="amount" id="amt-new" />
+                    <label class='new-label' for="des">Description</label>
+                    <textarea name="description" id="des" placeholder="Optional ..." cols="30" rows="10"></textarea>
+                </fieldset>
+                <input type="submit" class='new-submit' value="Add Expense" />
+            </form>
+        </div>
+
+    </body>
+
+</html>

@@ -12,12 +12,15 @@
 <body>
     <header class='idx-header'>
         <div class='idx-header-h1'>
-            <a href="/debit" class='header-a'>
+            <a href="/" class='header-a'>
                 <h1>PFT</h1>
             </a>
         </div>
         <div class='idx-header-new'>
-            <a href="/debit/new" class='header-a'>New Expense</a>
+            <a href="/debit/new" class='header-a'>New Debit Expense</a>
+        </div>
+        <div class='idx-header-new'>
+            <a href="/" class='header-a'>PFT Dashboard</a>
         </div>
     </header>
     <div class='cont-idx'>
@@ -42,18 +45,17 @@
                             </a>
                         </div>
                         <div class='edit-btn'>
-                            <button class='edit-btn-btn'>
-                                <a href="/debit/<%=debit._id %>/edit" class='edit-text'>Edit</a>
-                            </button>
+                            <a href="/debit/<%=debit._id %>/edit" style='text-decoration: none; color: black;'>
+                                <ion-icon name="create-outline"></ion-icon>
+                            </a>
                         </div>
-                        <br>
+                        
                         <div class='del-btn'>
-
                             <form action='/debit/<%= debit._id %>?_method=DELETE' method='POST'>
-                                <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
-                                        style='border: none; background: none;' /> </button>
+                                <input class='del-text' type="submit" value=" "
+                                    style='border: none; background: none;' />
+                                <ion-icon name="trash-outline"></ion-icon>
                             </form>
-                            </button>
                         </div>
 
                     </li>
@@ -63,7 +65,8 @@
 
     </div>
 
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
