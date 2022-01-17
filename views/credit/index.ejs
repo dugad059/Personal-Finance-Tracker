@@ -26,7 +26,7 @@
     <div class='cont-idx'>
         <h1 class='idx-all-exp-title'>All Credit Expenses</h1>
         <ul style='list-style-type: none;'>
-            <% allCredits.forEach(credit => { %>
+            <% allCredits.forEach(credit=> { %>
                 <div class='cont-idx-box'>
                     <li class='cont-idx-row'>
                         <div class='date'>
@@ -45,18 +45,19 @@
                             </a>
                         </div>
                         <div class='edit-btn'>
-                            <button class='edit-btn-btn'>
-                                <a href="/credit/<%=credit._id %>/edit" class='edit-text'>Edit</a>
-                            </button>
+                            <a href="/credit/<%=credit._id %>/edit" style='color: black;'>
+                                <ion-icon name="create-outline"></ion-icon>
+                            </a>
+
                         </div>
                         <br>
                         <div class='del-btn'>
 
                             <form action='/credit/<%= credit._id %>?_method=DELETE' method='POST'>
-                                <button class='del-btn-btn'> <input class='del-text' type="submit" value="DELETE"
-                                        style='border: none; background: none;' /> </button>
+                                <input class='del-text' type="submit" value=""  style='border: none; background: none;' />
+                                <ion-icon name="trash-outline"></ion-icon>
                             </form>
-                            </button>
+
                         </div>
 
                     </li>
@@ -66,7 +67,8 @@
 
     </div>
 
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
