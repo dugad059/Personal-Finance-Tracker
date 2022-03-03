@@ -34,7 +34,7 @@ New Page
 
 ## Getting Started
 
-[Click HERE](https://personal-finance-tracker-059.herokuapp.com/expenses) to start logging you expenses!!
+[Click HERE](https://personal-finance-tracker-059.herokuapp.com/dashboard) to start logging you expenses!!
 
 
 ## Future Enhancements
