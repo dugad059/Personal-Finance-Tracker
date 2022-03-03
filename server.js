@@ -16,11 +16,11 @@ const app = express();
 // Configure Server Settings
 require('dotenv').config();
 app.set('view engine', 'ejs');
-const { PORT, DATABASE_URL } = process.env;
+const { PORT, MONGODB_URL } = process.env;
 
 
 // Establish Connection to MongoDB
-mongoose.connect(DATABASE_URL);
+mongoose.connect(MONGODB_URL);
 
 
 // Database Connection Error/Success
