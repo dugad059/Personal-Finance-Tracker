@@ -16,61 +16,83 @@
 </head>
 
 <body>
-    <header class='idx-header'>
-        <div class='idx-header-h1'>
-            <a href="/" class='header-a'>
-                <h1>PFT</h1>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <h1 class="display-2 text-light">PFT</h1>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link indexnav active fs-4 text-light me-3" aria-current="page"
+                            href="/credit/new">New
+                            Credit Expense</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active indexnav fs-4 text-light" href="/">PFT Dashboard</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class='idx-header-new'>
-            <a href="/credit/new" class='header-a'>New Credit Expense</a>
-        </div>
-        <div class='idx-header-new'>
-            <a href="/" class='header-a'>PFT Dashboard</a>
-        </div>
-    </header>
-    <div class='cont-idx'>
-        <h1 class='idx-all-exp-title'>All Credit Expenses</h1>
-        <ul style='list-style-type: none;'>
-            <% allCredits.forEach(credit=> { %>
-                <div class='cont-idx-box'>
-                    <li class='cont-idx-row'>
-                        <div class='date'>
+    </nav>
+
+
+    <div class='container-fluid'>
+        <h1 class='text-center mt-3'>All Credit Expenses</h1>
+    </div>
+
+    <ul style='list-style-type: none;'>
+        <% allCredits.forEach(credit=> { %>
+            <li>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class='date col-md-1 col-3'>
                             <a href="/credit/<%= credit._id %> " style='text-decoration: none; color: black;'>
                                 <%= credit.date; %>
                             </a>
                         </div>
-                        <div class='name'>
+                        <div class='name col-md-5 col-3 ps-5'>
                             <a href="/credit/<%= credit._id %> " style='text-decoration: none; color: black;'>
                                 <%= credit.name; %>
                             </a>
                         </div>
-                        <div class=amt>
+                        <div class='amt col-md-2 col-2 text-end'>
                             <a href="/credit/<%= credit._id %> " style='text-decoration: none; color: black;'>
-                                $ <%= credit.amount; %>
+                                $<%= credit.amount; %>
                             </a>
                         </div>
-                        <div class='edit-btn'>
-                            <a href="/credit/<%=credit._id %>/edit" style='color: black;'>
-                                Edit
-                            </a>
-
+                        <div class='edit col-2 d-none d-sm-block text-end'>
+                            <a href="/credit/<%=credit._id %>/edit"
+                                style='color: black; text-decoration: none;'>Edit</a>
                         </div>
-                        <br>
-                        <div class='del-btn'>
-
+                        <div class='del col-2 d-none d-sm-block' style>
                             <form action='/credit/<%= credit._id %>?_method=DELETE' method='POST'>
-                                <input class='del-text' type="submit" value="Delete"  style='border: none; background: none;' />
+                                <input class='del-text' type="submit" value="Delete"
+                                    style='border: none; background: none;' />
                             </form>
-
                         </div>
-
-                    </li>
+                        <div class='edit col-2 d-block d-sm-none text-end'>
+                            <a href="/credit/<%=credit._id %>/edit" style='color: black; text-decoration: none;'>
+                                <i class="bi bi-pencil-square"></i></a>
+                        </div>
+                        <div class='del col-2 d-block d-sm-none text-center pb-5'>
+                            <form action='/credit/<%= credit._id %>?_method=DELETE' method='POST'>
+                                <input class='del-text' type="submit" value=""
+                                    style='border: none; background: none;' />
+                                <i class="bi bi-trash-fill"></i>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <% }) %>
-        </ul>
+            </li>
+            <% }) %>
+    </ul>
 
-    </div>
+
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
