@@ -36,7 +36,7 @@
                             <span class="input-group-text">
                                 <i class="bi bi-bag-check"></i>
                             </span>
-                            <input placeholder="Chipotle ..." type="text" class="form-control" id="name" />
+                            <input placeholder="Chipotle ..." type="text" class="form-control" name="name" id="name" />
                         </div>
 
                         <label class='form-label' for="date">Transaction Date</label>
@@ -44,7 +44,7 @@
                             <span class="input-group-text">
                                 <i class="bi bi-calendar-check"></i>
                             </span>
-                            <input placeholder=" 1/1/21..." type="text" class="form-control" id="date" />
+                            <input placeholder=" 1/1/21..." type="text" class="form-control" name="date" id="date" />
                         </div>
 
                         <label class='form-label' for="amt">Amount</label>
@@ -52,11 +52,11 @@
                             <span class="input-group-text">
                                 <i class="bi bi-currency-dollar"></i>
                             </span>
-                            <input placeholder="12.00..." type="text" class="form-control" id="amt" />
+                            <input placeholder="12.00..." type="text" class="form-control" name="amount" id="amt" />
                         </div>
 
                         <label class='form-label' for="des">Description</label>
-                        <textarea id="des" placeholder="Optional ..." class="form-control"
+                        <textarea id="des" name="description" placeholder="Optional ..." class="form-control"
                             style="height: 140px;"></textarea>
                         <div class="text-center mt-3">
                             <input type="submit" class='btn btn-primary btn-lg' value="Add Expense" />
